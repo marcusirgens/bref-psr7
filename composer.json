@@ -1,0 +1,57 @@
+{
+    "name": "marcuspi/bref-psr7",
+    "license": "MIT",
+    "description": "PSR-7 support in Bref",
+    "type": "library",
+    "autoload": {
+        "files": [
+            "src/functions.php"
+        ],
+        "psr-4": {
+            "MarcusIrgens\\BrefPsr7\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MarcusIrgens\\BrefPsr7\\Test\\Unit\\": "tests/unit/"
+        }
+    },
+    "require": {
+        "php": "^7.3",
+        "bref/bref": "^0.5.11",
+        "nyholm/psr7": "^1.2",
+        "nyholm/psr7-server": "^0.4.1",
+        "riverline/multipart-parser": "^2.0.1",
+        "psr/http-factory": "^1.0",
+        "psr/http-server-handler": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "zendframework/zend-diactoros": "^1.6|^2.0",
+        "doctrine/coding-standard": "^5.0",
+        "phpstan/phpstan": "^0.11.5",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "scripts": {
+        "test": [
+            "@static-analysis",
+            "@unit-tests",
+            "@code-style"
+        ],
+        "code-style": [
+            "vendor/bin/phpcs"
+        ],
+        "static-analysis": [
+            "vendor/bin/phpstan analyse"
+        ],
+        "unit-tests": [
+            "vendor/bin/phpunit"
+        ]
+    },
+    "scripts-descriptions": {
+        "test": "Run the full test suite for bref",
+        "code-style": "Run code style checks using PHP_CodeSniffer",
+        "static-analysis": "Run static analysis using PHPStan",
+        "unit-tests": "Run unit tests with PHPUnit"
+    }
+}

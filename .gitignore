@@ -1,0 +1,7 @@
+/vendor
+/*.cache
+/*-cache
+/composer.lock
+/composer.phar
+/.idea
+
