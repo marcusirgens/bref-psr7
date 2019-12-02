@@ -1,13 +1,6 @@
-<?php
-/**
- * @copyright Visma Digital Commerce AS 2019
- * @license Proprietary
- * @author Marcus Pettersen Irgens <marcus.irgens@visma.com>
- */
+<?php declare(strict_types=1);
 
 use MarcusIrgens\BrefPsr7\Psr7Handler;
-
-declare(strict_types=1);
 
 /**
  * @param callable $handler This callable takes a $request parameter
